@@ -15,6 +15,9 @@
   Factory default duty is 0x00F0 (~8% high level)[reference:2].
   Typical usable range: 0x0010 (very quiet) .. 0x0200 (max loudness).
   Values above ~0x0400 may clip or distort.
+
+  
+  Authur - Babatunde
 */
 
 #include <Arduino.h>
