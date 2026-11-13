@@ -18,6 +18,9 @@
     - Note their IDs (shown next to each image in DGUS Tool)
     - Optionally add a touch button with VP = 0x1000
       and action "Return key value" (sends 1 on press)
+
+      
+      Authur - Babatunde
 */
 
 #include <Arduino.h>
