@@ -1,5 +1,5 @@
 /*
-  DWIN_LCD.h - Arduino library for DWIN DGUS/T5L HMI displays
+  DWIN_LCD.h - Babatunde Arduino library for DWIN DGUS/T5L HMI displays
   Native protocol: 0x80 (write reg), 0x81 (read reg),
                    0x82 (write VP), 0x83 (read VP).
   Optional CRC16-CCITT on TX.
