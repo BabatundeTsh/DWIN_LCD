@@ -1,0 +1,18 @@
+#######################################
+# Datatypes
+#######################################
+PressureSensor         KEYWORD1
+
+
+#######################################
+# Functions
+#######################################
+begin                  KEYWORD2
+readVolt               KEYWORD2
+readCurr               KEYWORD2
+setParam               KEYWORD2
+readPressure           KEYWORD2
+
+
+#######################################
+
