@@ -18,6 +18,8 @@
     - Touch button  : VP = 0x1000   -> action "Return key value" (0 or 1)
     - Text control  : Text VP  = 0x2000
                       Color VP = 0x3000   (optional, for colored text)
+                      
+  Authur - Babatunde
 */
 
 #include <Arduino.h>
