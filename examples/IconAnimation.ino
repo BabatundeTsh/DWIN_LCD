@@ -19,6 +19,9 @@
                      X VP = 0x2031   Y VP = 0x2032  (optional)
 
   Every animation runs on its own timer so they all appear independent.
+
+  
+  Authur - Babatunde
 */
 
 #include <Arduino.h>
