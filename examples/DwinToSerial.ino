@@ -9,6 +9,9 @@
     - Add any touch button / touch control to a page
     - Set its "Touch VP" to any address, e.g. 0x1000
     - Configure it as "Return key value" so it sends 1 (and 0 on release)
+
+    
+  Authur - Babatunde
 */
 
 #include <Arduino.h>
