@@ -11,6 +11,9 @@
     - On any page, add a touch button with:
          Touch VP = 0x1000
          Action   = Return key value (sends 1 on press)
+
+         
+         Authur - Babatunde
 */
 
 #include <Arduino.h>
