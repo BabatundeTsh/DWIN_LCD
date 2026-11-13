@@ -18,6 +18,9 @@
       Width          = 64   (must match the PHP server's w)
       Height         = 64   (must match the PHP server's h)
       Format         = RGB565 (16-bit)
+
+      
+      Authur - Babatunde
 */
 
 #include <Arduino.h>
