@@ -1,6 +1,6 @@
 # DWIN_LCD
 
-An Arduino library for **DWIN DGUS / T5L HMI displays**. Implements the native DWIN serial protocol (0x80–0x83) with optional CRC16-CCITT, touch callbacks, text/color helpers, single/multi-curve plotting, and image display/streaming.
+Babatunde Arduino library for **DWIN DGUS / T5L HMI displays**. Implements the native DWIN serial protocol (0x80–0x83) with optional CRC16-CCITT, touch callbacks, text/color helpers, single/multi-curve plotting, and image display/streaming.
 
 No external dependencies for core features — works with any Arduino board via `HardwareSerial` or `SoftwareSerial`. Optional image streaming supports SD cards and HTTP servers (Wi‑Fi or GSM).
 
