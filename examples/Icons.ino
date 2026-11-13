@@ -18,6 +18,9 @@
   This sketch:
     - Cycles every icon through all of its states automatically.
     - Also reacts to touch buttons (if present) to change individual icons.
+
+    
+  Authur - Babatunde
 */
 
 #include <Arduino.h>
