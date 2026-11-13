@@ -10,6 +10,8 @@
     - For the touch version, add two touch buttons:
          Button A -> Touch VP = 0x1000  (Return key value = 1)
          Button B -> Touch VP = 0x1001  (Return key value = 1)
+
+         Authur - Babatunde
 */
 
 #include <Arduino.h>
