@@ -14,6 +14,9 @@
     - Text control   :    Text VP  = 0x2000
                           Color VP = 0x3000
     - Touch button   :    VP       = 0x1000  (returns 1 on press)
+
+    
+     Authur - Babatunde
 */
 
 #include <Arduino.h>
