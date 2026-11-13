@@ -23,6 +23,9 @@
        (search: "image to RGB565 C array")
        or use the Python snippet at the bottom of this file.
     2) Replace generateRow() with a lookup into your array.
+
+    
+      Authur - Babatunde
 */
 
 #include <Arduino.h>
