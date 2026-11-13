@@ -9,6 +9,9 @@
     - Add a Text Display control on page 0
     - Set its "Text VP" to 0x2000
     - Word length: at least 16 words (32 bytes) to fit our strings
+
+    
+  Authur - Babatunde
 */
 
 #include <Arduino.h>
