@@ -8,7 +8,7 @@ category=Display
 url=https://github.com/BabatundeTsh/DWIN_LCD
 architectures=*
 includes=DWIN_LCD.h
-depends=
+
  
 
 
