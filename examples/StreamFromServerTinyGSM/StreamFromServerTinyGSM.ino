@@ -270,7 +270,7 @@ void loop() {
  *   f = filename inside ./images/ (default logo.png)
  *
  * Response: w * h * 2 bytes, little-endian RGB565, row-major.
- */
+ 
 
 $width  = isset($_GET['w']) ? max(1, min(320, (int)$_GET['w'])) : 64;
 $height = isset($_GET['h']) ? max(1, min(240, (int)$_GET['h'])) : 64;
