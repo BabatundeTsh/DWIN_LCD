@@ -3,6 +3,11 @@
   #############################
   Authur - Babatunde .Tsh
   #############################
+
+  This streams an image from a remote PHP server to a DWIN display using a GSM/GPRS/LTE modem (SIM800, SIM7000, SIM7600, etc.)
+  via the TinyGSM library. 
+  The image is fetched row‑by‑row over HTTP and forwarded directly to the panel’s VP block —
+  no full‑image buffering on the microcontroller.
   
   StreamFromServerTinyGSM.ino
   Fetch an image from a PHP server using a GSM modem (TinyGSM)
