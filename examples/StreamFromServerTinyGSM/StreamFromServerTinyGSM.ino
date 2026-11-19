@@ -257,5 +257,87 @@ void loop() {
 
 
 
+/*
+
+
+<?php
+/**
+ * image_server.php - Serve an image as raw RGB565 binary
+ *
+ * Query parameters:
+ *   w = width  in pixels (default 64)
+ *   h = height in pixels (default 64)
+ *   f = filename inside ./images/ (default logo.png)
+ *
+ * Response: w * h * 2 bytes, little-endian RGB565, row-major.
+ */
+
+$width  = isset($_GET['w']) ? max(1, min(320, (int)$_GET['w'])) : 64;
+$height = isset($_GET['h']) ? max(1, min(240, (int)$_GET['h'])) : 64;
+$file   = isset($_GET['f']) ? basename($_GET['f']) : 'logo.png';
+
+$path = __DIR__ . '/images/' . $file;
+if (!file_exists($path)) {
+    http_response_code(404);
+    header('Content-Type: text/plain');
+    echo "Image not found: $file";
+    exit;
+}
+
+$info = getimagesize($path);
+if ($info === false) {
+    http_response_code(415);
+    header('Content-Type: text/plain');
+    echo "Unsupported image format";
+    exit;
+}
+
+switch ($info[2]) {
+    case IMAGETYPE_PNG:  $src = imagecreatefrompng($path);  break;
+    case IMAGETYPE_JPEG: $src = imagecreatefromjpeg($path); break;
+    case IMAGETYPE_GIF:  $src = imagecreatefromgif($path);  break;
+    default:
+        http_response_code(415);
+        header('Content-Type: text/plain');
+        echo "Unsupported image type";
+        exit;
+}
+
+$dst = imagecreatetruecolor($width, $height);
+imagealphablending($dst, false);
+imagesavealpha($dst, false);
+imagecopyresampled($dst, $src, 0, 0, 0, 0,
+                   $width, $height,
+                   imagesx($src), imagesy($src));
+
+header('Content-Type: application/octet-stream');
+header('Content-Length: ' . ($width * $height * 2));
+header('Cache-Control: no-store');
+header('X-Image-Width: '  . $width);
+header('X-Image-Height: ' . $height);
+
+while (ob_get_level() > 0) ob_end_flush();
+
+for ($y = 0; $y < $height; $y++) {
+    $row = '';
+    for ($x = 0; $x < $width; $x++) {
+        $rgb = imagecolorat($dst, $x, $y);
+        $r = ($rgb >> 16) & 0xFF;
+        $g = ($rgb >>  8) & 0xFF;
+        $b =  $rgb        & 0xFF;
+        $c = (($r & 0xF8) << 8) | (($g & 0xFC) << 3) | ($b >> 3);
+        $row .= chr($c & 0xFF) . chr(($c >> 8) & 0xFF);   // little-endian
+    }
+    echo $row;
+    flush();
+}
+
+imagedestroy($src);
+imagedestroy($dst);
+
+
+
+*/
+
 
 
