@@ -259,6 +259,11 @@ void loop() {
 
 /*
 
+Part 1 — PHP server (image_server.php)
+Place this on any PHP‑enabled host with the GD library. It resizes a source image, converts it to raw RGB565, and streams the bytes with a flush() after each row so the microcontroller starts receiving data immediately.
+
+
+
 
 <?php
 /**
