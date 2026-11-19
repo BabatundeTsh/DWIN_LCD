@@ -1,9 +1,9 @@
 /*
 
- #############################
+  #############################
   Authur - Babatunde .Tsh
   #############################
-
+  
   StreamFromServerTinyGSM.ino
   Fetch an image from a PHP server using a GSM modem (TinyGSM)
   and stream it to a DWIN display.
@@ -51,14 +51,9 @@ const uint16_t VP_IMG = 0x4000;
 
 // ---- Serial port assignments ----------------------------------------------
 // Adjust these to your board's free hardware serial ports.
-
-// HELLOOOOO PLS NOTE ############################################################################
-// Esp32 uses the following serial ,choose your serial according to your board or mcu
 #define SerialMon   Serial          // USB serial monitor
 #define SerialGSM   Serial1         // modem
 #define SerialDWIN  Serial2         // DWIN display
-
-
 
 // ---- Baud rates -----------------------------------------------------------
 const uint32_t GSM_BAUD  = 115200;
@@ -258,3 +253,9 @@ void loop() {
         }
     }
 }
+
+
+
+
+
+
